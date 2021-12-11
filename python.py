@@ -49,3 +49,20 @@ while password != "computer":
 if debounce != True:
   print("\n[ ✔ ] '" + password + "' is correct")
 
+#   STRING MANIPULATION   #
+
+zooName = "London Zoo"
+print("String ⬎")
+print(" |  London Zoo")
+print("")
+print("Input ⬎")
+print(" |  len(zooName)")
+print(" |  zooName[1:5]")
+print(" |  zooName[:8]")
+print(" |  zooName[5:]") 
+print("")
+print("Output ⬎")
+print(" | ",len(zooName)) 
+print(" | ",zooName[1:5]) 
+print(" | ",zooName[:8]) 
+print(" | ",zooName[5:])
