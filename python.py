@@ -33,3 +33,19 @@ remainder = int(input("Remainder of 7 and: ")) % 7
 print(remainder)
 exponential = int(input("Exponential of 3 and: ")) ** 3
 print(exponential)
+
+#   PASSWORD   #
+
+password = input("Enter pass: ")
+num = 1
+debounce = False
+while password != "computer":
+  if num >= 3:
+    print("\n[ ✘ ] You took too many tries.")
+    debounce = True
+    break
+  num += 1
+  password = input("\n[ ✘ ] '" + password + "' is incorrect\n\nEnter pass: ")
+if debounce != True:
+  print("\n[ ✔ ] '" + password + "' is correct")
+
