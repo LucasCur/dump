@@ -66,3 +66,12 @@ print(" | ",len(zooName))
 print(" | ",zooName[1:5]) 
 print(" | ",zooName[:8]) 
 print(" | ",zooName[5:])
+
+#   AVERAGE TEMP CALCULATOR   #
+
+total = 0
+for i in range(0,7):
+  dailyTemperature = int(input("\nDay " + str(i+1) + " Temp\n| "))
+  total += dailyTemperature
+averageWeeksTemp = total / 7
+print("\nWeek's Average Temp\n| " + str(averageWeeksTemp))
