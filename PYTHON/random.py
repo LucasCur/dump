@@ -82,3 +82,20 @@ for i in range (1,4):
   for j in range (1,3):
     z = i + j
     print(z)
+
+#   RAND   #
+
+print("This program prints selected numbers in a given range")
+anotherGo = "Y"
+while anotherGo == "Y":
+  lowNumber = int(input("Please enter first number in your chosen range: "))
+  highNumber = int(input("Please enter last number in your chosen range: "))
+  totalNum = 0
+  
+  for i in range(lowNumber, highNumber):
+    if i % 5 != 0 and i % 7 != 0:
+      print(i)
+      totalNum = totalNum + 1
+  print(totalNum)
+  answer = input("Another go? (Y or N)")
+  anotherGo = answer.upper()
