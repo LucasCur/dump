@@ -75,3 +75,10 @@ for i in range(0,7):
   total += dailyTemperature
 averageWeeksTemp = total / 7
 print("\nWeek's Average Temp\n| " + str(averageWeeksTemp))
+
+#   NESTED LOOPS   #
+
+for i in range (1,4):
+  for j in range (1,3):
+    z = i + j
+    print(z)
