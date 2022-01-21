@@ -99,3 +99,20 @@ while anotherGo == "Y":
   print(totalNum)
   answer = input("Another go? (Y or N)")
   anotherGo = answer.upper()
+
+  #   ARRAY MANIPULATION   #
+  
+  array = ["psmith", "ltorvalds", "pwatts", "sjones", "mpatel", "bwright", "mgreen", "dthomas", "nwhite", "fdavies"]
+
+for i in array:
+  print(i)
+
+toCheck = input("Your username: ")
+found = False
+for i in array:
+  if toCheck in i:
+    found = True
+if found == True:
+  print("Your username was found!")
+else:
+  print("We searched through", str(len(array)) +" usernames, but yours wasn't found!")
