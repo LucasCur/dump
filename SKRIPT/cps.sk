@@ -1,0 +1,27 @@
+every 5 ticks:
+	loop all players:
+		set {_qurt} to {cps::%loop-player's uuid%}
+		remove {_qurt} / 4 from {cps::%loop-player's uuid%}
+
+on left click:
+	add 1 to {cps::%player's uuid%}
+	add 1 to {cps::total::%player's uuid%}
+
+on join:
+	set {cps::%player's uuid%} to 0
+	
+on quit:
+	delete {cps::%player's uuid%}
+	
+command /checkcps <players>:
+	trigger:
+		send "%arg-1%'s total cps is %{totalcps::%arg-1's uuid%}%"
+		send "&7Displaying %arg-1%&7's current cps for the next 5 seconds..."
+		set {checking::%player's uuid%} to "%arg-1's uuid%"
+		wait 5 seconds
+
+every 5 ticks:
+	loop all players:
+		if {checking::%loop-player's uuid%} is set:
+			{checking::%loop-player's uuid%} is online
+			send action bar "%{cps::%{checking::%loop-player's uuid%}%}%" to loop-player
